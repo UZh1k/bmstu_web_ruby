@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LR4 Яныгин</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div align="center">
+            <h2>Таблица товаров</h2>
+            <table>
+                <tr>
+                    <th>
+                        Наименование
+                    </th>
+                    <th class="check">
+                        Стоимость, ₽
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        Яблоко
+                    </td>
+                    <td class="check" onclick="addProduct('Яблоко', 5)">
+                        5
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Банан
+                    </td>
+                    <td class="check" onclick="addProduct('Банан', 7)">
+                        7
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ананас
+                    </td>
+                    <td class="check" onclick="addProduct('Ананас', 15)">
+                        15
+                    </td>
+                </tr>
+            </table>
+            <h2>Введите наименование товара и стоимость</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="input-field col s4">
+                        <input type="text" id="title-input" class="validate" value="Манго">
+                        <label for="title-input">Наименование</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input type="number" id="cost-input" class="validate" value="10">
+                        <label for="cost-input">Стоимость, ₽</label>
+                    </div>
+                    <div class="col s4">
+                        <button class="btn waves-effect waves-light btn-large" onclick="Add()">Добавить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col s6">
+                        <button class="btn waves-effect waves-light btn-large" onclick="Count()">Посчитать стоимость</button>
+                    </div>
+                    <div class="col s6">
+                        <h4 id="total">
+                            Итоговая стоимость: 0
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <table>
+                <tbody id="tb">
+                    <tr>
+                        <th>
+                            Наименование
+                        </th>
+                        <th class="check">
+                            Стоимость, ₽
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+            <br/><br/>
+
+        </div>
+    </div>
+    <script>
+        let total_cost = 0;
+        let total = document.getElementById("total");
+        function Add(){
+            let tb = document.getElementById("tb");
+            tb.innerHTML += '<tr> <td>' + document.getElementById("title-input").value + '</td> <td class="check">' + document.getElementById("cost-input").value + '</td> </tr>';
+            total_cost += parseInt(document.getElementById("cost-input").value);
+        }
+        function Count(){
+            total.innerHTML = "Итоговая стоимость: " + total_cost;
+        }
+        function addProduct(title, cost){
+            let tb = document.getElementById("tb");
+            tb.innerHTML += '<tr> <td>' + title + '</td> <td class="check">' + cost + '</td> </tr>';
+            total_cost += cost;
+        }
+
+    </script>
+    <style>
+        td, th{
+            text-align: center;
+        }
+
+        .check:hover {
+            background-color: #4db6ac;
+            color: white;
+        }
+
+        
+    </style>
+</body>
+</html>

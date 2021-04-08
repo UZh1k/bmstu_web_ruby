@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tree_elements</title>
+</head>
+<body>
+
+        <h1>
+            ruby
+        </h1>
+        <ul>
+            <li>
+                <h1>
+                    is
+                </h1>
+            </li>
+            <li>
+                <h2>
+                    very
+                </h2>
+            </li>
+            <li>
+                <h3>
+                    ambitious
+                </h3>
+            </li>
+            <ol>
+                <li>
+                    <h2>
+                        programming
+                    </h2>
+                </li>
+                <li>
+                    <h1>
+                        language
+                    </h1>
+                </li>
+                <li>
+                    <h1>
+                        (no)
+                    </h1>
+                </li>
+            </ol>
+        </ul>
+        <button onclick="WriteNodes()">
+            Tap to see the tree
+        </button>
+        <br/>
+        <div id="result">
+		</div>
+
+    <script>
+        tags = new Array();
+        flag = false;
+
+        function ContainNodes(el, start){
+            console.log(el);
+            tags.push(start + el);
+            for (var i = 0; i < el.childNodes.length; i++){
+                ContainNodes(el.childNodes[i], start + "&nbsp");
+            }
+        }
+
+        function WriteNodes(){
+            if (!flag){
+                ContainNodes(document.body, "");
+                result = "";
+                for (var i = 0; i < tags.length; i++){
+                    result = result + tags[i] + "<br />";
+                }
+                document.getElementById("result").innerHTML = '<div id="result">\n' + result + "\n<\div>";
+                flag = true;
+            }
+        }
+
+    </script>
+</body>
+</html>

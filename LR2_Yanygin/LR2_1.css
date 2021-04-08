@@ -1,0 +1,43 @@
+main {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 110%;
+}
+
+code {
+    font-family: Monaco, 'MonacoRegular', 'Courier New', monospace;
+    font-size: 120%;
+}
+
+.highlight{
+    color: red;
+}
+
+span{
+    color: blue;
+}
+
+/**.highlight {
+    color: red;
+}**/
+
+.des{
+    background-color: lightgrey;
+}
+
+p.par2 {
+    font-family: fantasy;
+    font-size: 130%;
+}
+
+span.bald{
+    font-style: italic;
+}

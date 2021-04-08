@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ЛР2_1</title>
+    <link rel="stylesheet" href="LR2_1.css"/>
+</head>
+<body>
+    <main>
+        <h1> <em>Алгоритмы. Числа Фибоначчи</em> </h1>
+        <p>
+            <span class="highlight">Числа Фибоначчи</span> — это наверное <span class="bald">самая простая</span> последовательность и практически каждый из нас ее знает: <em> 1, 1, 2, 3, 5, 8, 13… </em>
+            Формально их можно отобразить просто:
+        </p>
+        <p>
+            <strong>
+                F<sub>0</sub> = 0, F<sub>1</sub> = 1, F<sub>n</sub> = F<sub>n-2</sub> + F<sub>n-1</sub>, n >=2
+            </strong>
+        </p>
+        <p>Найти <strong>n-ое число</strong> Фибоначчи достаточно просто:</p>
+        <pre>
+            <code>
+    function fibonacchi(n){
+      if ( n == 0 ) return 0;
+
+      if (n == 1) return 1;
+      return fibonacchi(n-2) + fibonacchi(n-1);
+    }
+    console.log(fibonacchi(10));
+            </code>
+        </pre>
+
+            <p class="par2">
+                Простая рекурсивная функция, которая вызывает сама себя, пока не дойдет до момента когда <strong>n = 0</strong> или <strong>n = 1</strong>. Казалось бы, что тут сложного? <br>
+                Числа Фибоначчи очень часто используют как объяснение такого подхода как мемоизация. <strong>Мемоизация</strong> <span class="des"> — это подход, который позволяет нам сохранять результаты промежуточных решений, для того чтобы в следующих расчетах не повторять тоже самое. </span> <br>
+                Принцип невероятно прост, в данном случае мы выделяем массив — все значения которого <strong>== 0</strong>, и записываем все получившиеся вычисления, таким образом имеем следующий код: <br>
+
+            </p>
+
+        <pre>
+            <code>
+    var results = [0,1];
+
+    function fibonacchi(n){
+      if ( n == 0 ) return results[0];
+
+      if (n == 1) return results[1];
+
+      if (!results[n]){
+        results[n] = fibonacchi(n-2) + fibonacchi(n-1);
+      }
+      return results[n];
+    }
+            </code>
+        </pre>
+    </main>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+     <title>ICS6 Bootstrap</title>
+     <link
+         href="http://e-learning.bmstu.ru/moodle/pluginfile.php/7546/mod_folder/content/0/bootstrap.min.css" rel="stylesheet">
+     <style>
+         html {
+             position: relative;
+             min-height: 100%;
+         }
+         body {
+            margin-bottom: 40px;
+         }
+         main {
+            margin-top: 15px;
+         }
+         footer {
+            height: 40px;
+             position: absolute;
+             bottom: 0;
+             width: 100%;
+         }
+         .my-primary {
+             background-color: #e3f2fd;
+             color: white;
+         }
+     </style>
+</head>
+<body>
+     <header>
+         <nav class="navbar navbar-expand-lg navbar-light my-primary" style="background-color: #e3f2fd;">
+             <a class="navbar-brand" href="#">Navbar</a>
+             <ul class="navbar-nav mr-auto">
+                 <li class="nav-item active">
+                     <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                     </a>
+                     </li>
+                        <li class="nav-item">
+                     <a class="nav-link" href="#">Link</a>
+                 </li>
+             </ul>
+         </nav>
+     </header>
+     <main class="container">
+         <div class="row">
+             <div class="col-4">
+                 <img
+                 src=" http://e-learning.bmstu.ru/moodle/pluginfile.php/7546/mod_folder/content/0/avatar.jpg"
+                 alt="avatar" width="150" height="150">
+                 </div>
+             <div class="col-8">
+                <p>Любой текст</p>
+             </div>
+         </div>
+        <form method="get">
+         <div class="row">
+
+             <div class="col-4">
+                 <br>
+                <div class="row">
+                    <div class="col-5">
+                        <p>Name: </p>
+                    </div>
+                    <div class="col-7">
+                        <input type="text" class="form-control" name="user_name"/>
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class="col-5">
+                        <p>Email: </p>
+                    </div>
+                    <div class="col-7">
+                        <input type="text" class="form-control" name="user_email"/>
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class="col-5">
+                        <p>Password: </p>
+                    </div>
+                    <div class="col-7">
+                        <input type="password" class="form-control" name="user_password"/>
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class="col-5">
+                        <p>Date of Birth: </p>
+                    </div>
+                    <div class="col-7">
+                        <input type="date" class="form-control" name="user_bd"/>
+                    </div>
+                </div>
+
+
+            <div align="center">
+                <br>
+                <button class="btn btn-primary" type="submit">Submit</button></div>
+             </div>
+
+             <div class="col-4">
+                <table>
+        <thead>
+        <tr>
+            <th>
+                День
+            </th>
+            <th>
+                Время
+            </th>
+            <th>
+                Предметы
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td rowspan="6"><strong>ВТ</strong></td>
+            <td>08:30 - 10:05</td>
+            <td rowspan="2"></td>
+        </tr>
+        <tr>
+            <td>10:15 - 11:50</td>
+        </tr>
+        <tr>
+            <td>12:00 - 13:35</td>
+            <td><em>(лек)</em> Языки интернет-программирования <em>501ю</em></td>
+        </tr>
+        <tr>
+            <td>13:50 - 15:25</td>
+            <td><em>(лек)</em> Электротехника <em>501ю</em> <em></em>
+        </tr>
+        <tr>
+            <td>15:40 - 17:15</td>
+            <td><em>(сем)</em> Базы данных <em>427ю</em></td>
+        </tr>
+        <tr>
+            <td>17:25 - 19:00</td>
+            <td><em>(сем)</em> Электротехника <em>318</em></td>
+        </tr>
+        </tbody>
+    </table>
+             </div>
+             </div></form>
+             <div class="row">
+                 <div class="col">
+                    <p>
+            Простая рекурсивная функция, которая вызывает сама себя, пока не дойдет до момента когда <strong>n = 0</strong> или <strong>n = 1</strong>. Казалось бы, что тут сложного? <br>
+            Числа Фибоначчи очень часто используют как объяснение такого подхода как мемоизация. <strong>Мемоизация</strong> — это подход, который позволяет нам сохранять результаты промежуточных решений, для того чтобы в следующих расчетах не повторять тоже самое. <br>
+            Принцип невероятно прост, в данном случае мы выделяем массив — все значения которого <strong>== 0</strong>, и записываем все получившиеся вычисления, таким образом имеем следующий код: <br>
+
+        </p>
+                 </div>
+             </div>
+     </main>
+     <footer class="my-primary">
+         <div class="container">
+            <p class="footer-text" style="color: black;">Footer</p>
+         </div>
+     </footer>
+</body>
+</html>

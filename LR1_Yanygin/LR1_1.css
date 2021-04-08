@@ -1,0 +1,19 @@
+main {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 110%;
+}
+
+code {
+    font-family: Monaco, 'MonacoRegular', 'Courier New', monospace;
+    font-size: 120%;
+}
+
